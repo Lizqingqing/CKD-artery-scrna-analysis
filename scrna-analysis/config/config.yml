@@ -1,0 +1,30 @@
+seed: 1234
+output_dir: results/run01
+samples_file: config/samples.csv
+annotation_file: config/annotations.csv
+species: human
+qc:
+  mitochondrial_pattern: '^MT-'
+  min_features: 200
+  max_features: 6000
+  max_counts: 50000
+  max_percent_mt: 20
+analysis:
+  variable_features: 2000
+  pcs: 30
+  resolution: 0.5
+  min_pct: 0.25
+  logfc_threshold: 0.25
+metabolism:
+  expected_version: '1.0'
+  max_dense_gb: 4
+  min_pathway_genes: 5
+  min_pathway_fraction: 0.1
+trajectory:
+  subset_column: cell_type
+  subset_values: []
+  root_column: cell_type
+  root_values: []
+  num_dim: 30
+  use_partition: true
+  graph_test: false
